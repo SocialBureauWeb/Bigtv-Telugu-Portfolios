@@ -22,9 +22,6 @@ import Lenis from 'lenis'
 import DiagonalCarousel from '../Components/DiagonalCarousel.jsx'
 import GravityText from '../Components/GravityText.jsx'
 import ganeshImg from '../assets/GaneshYarakala/Ganesh.jpg'
-import aparnaImg from '../assets/AparnaKurup.png'
-import aryaImg from '../assets/AryaSurendran.png'
-import binilImg from '../assets/BinilPothan.webp'
 import ramadeviImg from '../assets/Remadevi.jpg'
 import sheikImg from '../assets/sheik.webp'
 import logoImg from '../assets/BIGTV-TELUGU-LOGO-NEW-1.png'
@@ -552,23 +549,6 @@ export default function BIGTVHub() {
   const ganeshBio = ganeshDbData ? ganeshDbData.bio : 'Associate Editor at BIG TV with 26 years of editorial integrity. Leading regional digital & broadcast synergy. Formative senior tenure at TV9.'
   const ganeshStatus = ganeshDbData ? ganeshDbData.status : 'LIVE RECORD'
 
-  const aparnaDbData = registeredCorres.find(u => u.email.toLowerCase() === 'aparna@bigtv.com')
-  const aparnaName = aparnaDbData ? aparnaDbData.name : 'Aparna Kurup'
-  const aparnaDivision = aparnaDbData ? aparnaDbData.division : 'National Bureau'
-  const aparnaBio = aparnaDbData ? aparnaDbData.bio : 'Senior Coordinating Editor, BIG TV 24/7. Over two decades of experience in broadcast news, specializing in live anchoring and editorial leadership.'
-  const aparnaStatus = aparnaDbData ? aparnaDbData.status : 'LIVE RECORD'
-
-  const aryaDbData = registeredCorres.find(u => u.email.toLowerCase() === 'arya@bigtv.com')
-  const aryaName = aryaDbData ? aryaDbData.name : 'Arya Surendran'
-  const aryaDivision = aryaDbData ? aryaDbData.division : 'Malayalam Bureau'
-  const aryaBio = aryaDbData ? aryaDbData.bio : 'Associate News Editor & Anchor, BIG TV News Malayalam. Active since 2016 with experience in Kerala Kaumudi, 24 News, and Reporter TV.'
-  const aryaStatus = aryaDbData ? aryaDbData.status : 'LIVE RECORD'
-
-  const binilDbData = registeredCorres.find(u => u.email.toLowerCase() === 'binil@bigtv.com')
-  const binilName = binilDbData ? binilDbData.name : 'Binil Pothen Babu'
-  const binilDivision = binilDbData ? binilDbData.division : 'Senior News Editor & Anchor'
-  const binilBio = binilDbData ? binilDbData.bio : 'Senior News Editor and Anchor at BIG TV Malayalam, serving as Desk Chief. Bridges newsroom strategy, on-screen presentation, and ground-zero bureaus.'
-  const binilStatus = binilDbData ? binilDbData.status : 'LIVE RECORD'
 
   const ramadeviDbData = registeredCorres.find(u => u.email.toLowerCase() === 'ramadevi@bigtv.com' || u.email.toLowerCase() === 'rema@bigtv.com')
   const ramadeviName = ramadeviDbData ? ramadeviDbData.name : 'Maryada Ramadevi'
@@ -623,25 +603,7 @@ export default function BIGTVHub() {
       ],
       link: '#/ganesh-yarakala'
     },
-    {
-      id: 'aparna',
-      name: aparnaName,
-      shortName: 'APARNA',
-      role: aparnaDivision,
-      nationality: 'INDIA',
-      primaryColor: '#10b981',
-      image: aparnaImg,
-      status: aparnaStatus,
-      aesthetic: 'Prime-Time Bulletins & Live Moderation',
-      bio: aparnaBio,
-      quote: 'Rehearse your knowledge, not just your script. The script will fail you. Your knowledge never will.',
-      keyWorks: [
-        { title: 'Senior Coordinating Editor & Anchor', genre: 'BIG TV 24/7 Output', year: '2024 — Present' },
-        { title: 'Special Correspondent Anchor', genre: 'Mathrubhumi News', year: '2020 — 2024' },
-        { title: 'Prime-Time Anchoring & Debates', genre: 'Asianet News', year: '2004 — 2020' }
-      ],
-      link: '#/aparna-kurup'
-    },
+
     {
       id: 'rema',
       name: ramadeviName,
@@ -661,44 +623,7 @@ export default function BIGTVHub() {
       ],
       link: '#/ramadevi'
     },
-    {
-      id: 'arya',
-      name: aryaName,
-      shortName: 'ARYA',
-      role: aryaDivision,
-      nationality: 'INDIA',
-      primaryColor: '#f59e0b',
-      image: aryaImg,
-      status: aryaStatus,
-      aesthetic: 'Malayalam Desk & Investigative Reports',
-      bio: aryaBio,
-      quote: 'As regional Malayalam broadcasting shifts, verification protocols remain our ultimate defense.',
-      keyWorks: [
-        { title: 'Associate News Editor & Anchor', genre: 'Malayalam Desk Output', year: '2024 — Present' },
-        { title: 'Senior Anchor & Reporter', genre: '24 News & Reporter TV', year: '2021 — 2024' },
-        { title: 'Broadcast Correspondent', genre: 'Kerala Kaumudi', year: '2016 — 2021' }
-      ],
-      link: '#/arya-surendran'
-    },
-    {
-      id: 'binil',
-      name: binilName,
-      shortName: 'BINIL',
-      role: binilDivision,
-      nationality: 'INDIA',
-      primaryColor: '#2563eb',
-      image: binilImg,
-      status: binilStatus,
-      aesthetic: 'Visual Media Strategy & Desk Chief',
-      bio: binilBio,
-      quote: 'True journalism bridges the gap between the ground reality and the screen presentation.',
-      keyWorks: [
-        { title: 'Senior News Editor & Anchor', genre: 'BIG TV Network', year: '2024 — Present' },
-        { title: 'Bureau Operations & Correspondent', genre: 'Manorama, Reporter, MediaOne', year: '2014 — 2024' },
-        { title: 'Delhi & Mumbai Bureau Chief', genre: 'National Politics', year: '2012 — 2014' }
-      ],
-      link: '#/binil-pothen'
-    },
+
     {
       id: 'sheik',
       name: sheikName,
@@ -1277,10 +1202,7 @@ export default function BIGTVHub() {
           <DiagonalCarousel
             items={[
               { src: ganeshImg, title: "Ganesh Yarakala", link: "#/ganesh-yarakala", accentColor: "#2563eb", role: ganeshDivision },
-              { src: aparnaImg, title: "Aparna Kurup", link: "#/aparna-kurup", accentColor: "#10b981", role: aparnaDivision },
               { src: ramadeviImg, title: "Maryada Ramadevi", link: "#/ramadevi", accentColor: "#2563eb", role: ramadeviDivision },
-              { src: aryaImg, title: "Arya Surendran", link: "#/arya-surendran", accentColor: "#f59e0b", role: aryaDivision },
-              { src: binilImg, title: "Binil Pothen Babu", link: "#/binil-pothen", accentColor: "#2563eb", role: binilDivision },
               { src: sheikImg, title: "Shaik Sartaj", link: "#/sheik", accentColor: "#c5a880", role: sheikDivision }
             ]}
             defaultActiveIndex={0}
@@ -1292,16 +1214,25 @@ export default function BIGTVHub() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-white border-t border-slate-900 mt-12 relative z-10">
+      <footer className="bg-slate-950 text-white py-16 border-t border-slate-900 mt-12 relative z-10">
+        <div className="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-12">
+          
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <img src="../assets/telugu logo.png" alt="BIG TV Logo" className="w-auto h-10" />
+            </div>
+            <p className="font-mono text-[9px] text-slate-500 tracking-wider">EDITORIAL PORTALS // NEWSROOM DIVISION CENTRAL</p>
+          </div>
 
-        {/* Main 3-column grid */}
-        <div className="max-w-container-max mx-auto px-margin-desktop py-14 grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-
-          {/* Col 1 — Brand */}
-          <div className="flex flex-col gap-4">
-            <img src={logoImg} alt="BIG TV Telugu" className="h-10 w-auto object-contain rounded bg-white p-0.5 self-start" />
-            <p className="font-mono text-[10px] text-slate-500 leading-relaxed uppercase tracking-widest max-w-[200px]">
-              Trusted<br/>24×7 Telugu News Network
+          <div className="flex flex-wrap justify-center gap-8 font-mono text-[10px] uppercase tracking-wider text-slate-400">
+            <span className="hover:text-white transition-colors cursor-pointer">Live Directory</span>
+            <span className="hover:text-white transition-colors cursor-pointer">Vetting Codes</span>
+            <span className="hover:text-white transition-colors cursor-pointer">Central Archive</span>
+          </div>
+          <div className="text-center md:text-right">
+            <p className="font-mono text-[10px] text-slate-500 leading-relaxed">
+              © {new Date().getFullYear()} BIG TV NEWSROOMS.<br/>
+              ALL CORRESPONDENT Blueprints VETTED.
             </p>
           </div>
 

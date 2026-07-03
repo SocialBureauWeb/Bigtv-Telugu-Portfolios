@@ -4,9 +4,6 @@ import ProfilePortal from './Pages/ProfilePortal.jsx'
 import Login from './Pages/Login.jsx'
 import Register from './Pages/Register.jsx'
 import Dashboard from './Pages/Dashboard.jsx'
-import AparnaKurup from './Pages/AparnaKurup.jsx'
-import AryaSurendran from './Pages/AryaSurendran.jsx'
-import BinilPothan from './Pages/BinilPothan.jsx'
 import Ramadevi from './Pages/Ramadevi.jsx'
 import Sheik from './Pages/Sheik.jsx'
 
@@ -31,21 +28,11 @@ function App() {
     return <ProfilePortal identifier="ganesh@bigtv.com" />
   }
 
-  if (hash.startsWith('#/aparna-kurup')) {
-    return <AparnaKurup />
-  }
 
   if (hash.startsWith('#/ramadevi')) {
     return <Ramadevi />
   }
 
-  if (hash.startsWith('#/arya-surendran')) {
-    return <AryaSurendran />
-  }
-
-  if (hash.startsWith('#/binil-pothen')) {
-    return <BinilPothan />
-  }
 
   if (hash.startsWith('#/sheik')) {
     return <Sheik />

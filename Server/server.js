@@ -39,7 +39,17 @@ const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'bigtv_newsroom_integrity_secret_key_2026';
 
 // Middleware
-app.use(cors());
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'https://bigtv-telugu-portfolios.vercel.app,https://bigtv-telugu-portfolios.onrender.com,http://localhost:5173,http://localhost:3000').split(',').map(s => s.trim());
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // allow requests with no origin (mobile apps, curl, server-to-server)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error('CORS policy: Origin not allowed'));
+  }
+}));
+
 app.use(express.json());
 
 // Request logger

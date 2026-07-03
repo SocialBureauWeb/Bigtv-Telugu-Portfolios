@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { apiFetch } from '../api'
 import { 
   User, 
   LogOut, 
@@ -246,7 +247,7 @@ export default function Dashboard() {
     formData.append('image', file)
 
     try {
-      const response = await fetch('/api/upload', {
+      const response = await apiFetch('/api/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -278,7 +279,7 @@ export default function Dashboard() {
 
     const fetchProfile = async () => {
       try {
-        const response = await fetch('/api/auth/me', {
+        const response = await apiFetch('/api/auth/me', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -336,7 +337,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await fetch('/api/users/profile', {
+      const response = await apiFetch('/api/users/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -392,12 +393,7 @@ export default function Dashboard() {
       <header className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-black/5 py-4">
         <nav className="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-12 w-full">
           <div className="flex items-center gap-3">
-            <a href="#/" className="flex items-center gap-2 hover:text-[#e30613] transition-colors">
-              <span className="w-6 h-6 bg-[#e30613] rounded flex items-center justify-center text-white font-display font-black text-xs">B</span>
-              <div className="font-mono text-xs tracking-[0.2em] text-[#e30613] uppercase font-bold">
-                BIG TV NEWSNET
-              </div>
-            </a>
+            <img src="../assets/telugu logo.png" alt="BIG TV Logo" className="w-auto h-10" />
           </div>
           
           <div className="flex items-center gap-6">

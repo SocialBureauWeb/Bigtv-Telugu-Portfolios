@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import Lenis from 'lenis'
 import ganeshImg from '../assets/GaneshYarakala/Ganesh.jpg'
+import { apiFetch } from '../api'
 
 // WebGL Background Shader Component
 const WebGLShader = () => {
@@ -382,7 +383,7 @@ export default function ProfilePortal({ identifier }) {
     const fetchProfileData = async () => {
       setLoading(true)
       try {
-        const res = await fetch('/api/users')
+        const res = await apiFetch('/api/users')
         if (res.ok) {
           const users = await res.json()
           const matched = users.find(u => 
