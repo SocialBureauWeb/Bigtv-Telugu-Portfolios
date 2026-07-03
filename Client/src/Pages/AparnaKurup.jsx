@@ -11,6 +11,7 @@ import {
 } from 'lucide-react'
 import Lenis from 'lenis'
 import aparnaImg from '../assets/AparnaKurup.png'
+import { apiFetch } from '../api'
 
 export default function AparnaKurup() {
   // Initialize Lenis smooth scroll
@@ -154,7 +155,7 @@ export default function AparnaKurup() {
   useEffect(() => {
     const fetchAparnaPortfolio = async () => {
       try {
-        const res = await fetch('/api/users')
+        const res = await apiFetch('/api/users')
         if (res.ok) {
           const users = await res.json()
           const aparna = users.find(u => u.email?.toLowerCase() === 'aparna@bigtv.com')

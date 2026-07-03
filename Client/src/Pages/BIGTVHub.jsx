@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 import Lenis from 'lenis'
 import DiagonalCarousel from '../Components/DiagonalCarousel.jsx'
+import { apiFetch } from '../api'
 import ganeshImg from '../assets/GaneshYarakala/Ganesh.jpg'
 import aparnaImg from '../assets/AparnaKurup.png'
 import aryaImg from '../assets/AryaSurendran.png'
@@ -424,7 +425,7 @@ export default function BIGTVHub() {
 
     const fetchCorrespondents = async () => {
       try {
-        const response = await fetch('/api/users')
+        const response = await apiFetch('/api/users')
         if (response.ok) {
           const data = await response.json()
           setRegisteredCorres(data)
@@ -893,6 +894,11 @@ export default function BIGTVHub() {
             <span className="hover:text-white transition-colors cursor-pointer">Live Directory</span>
             <span className="hover:text-white transition-colors cursor-pointer">Vetting Codes</span>
             <span className="hover:text-white transition-colors cursor-pointer">Central Archive</span>
+          </div>
+
+          <div className="flex flex-col text-[12px] text-slate-400 gap-1">
+            <a href="https://bigtv-telugu-portfolios.onrender.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Backend (Render)</a>
+            <a href="https://bigtv-telugu-portfolios.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Frontend (Vercel)</a>
           </div>
 
           <div className="text-center md:text-right">

@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import Lenis from 'lenis'
 import aryaImg from '../assets/AryaSurendran.png'
+import { apiFetch } from '../api'
 
 // Interactive Golden Particle Backdrop
 const InteractiveParticles = () => {
@@ -195,7 +196,7 @@ export default function AryaSurendran() {
   useEffect(() => {
     const fetchAryaPortfolio = async () => {
       try {
-        const res = await fetch('/api/users')
+        const res = await apiFetch('/api/users')
         if (res.ok) {
           const users = await res.json()
           const arya = users.find(u => u.email?.toLowerCase() === 'arya@bigtv.com')

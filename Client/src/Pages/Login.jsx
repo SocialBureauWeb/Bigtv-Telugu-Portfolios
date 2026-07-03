@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { apiFetch } from '../api'
 import { KeyRound, Mail, ArrowLeft, ShieldAlert, Clock, Terminal, Shield, Cpu, ShieldCheck } from 'lucide-react'
 
 // WebGL Background Shader (Dark glowing Crimson Red Nebulous Shader)
@@ -172,7 +173,7 @@ export default function Login() {
     setLoading(true)
 
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await apiFetch('/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

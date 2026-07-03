@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { apiFetch } from '../api'
 import { 
   User, 
   LogOut, 
@@ -246,7 +247,7 @@ export default function Dashboard() {
     formData.append('image', file)
 
     try {
-      const response = await fetch('/api/upload', {
+      const response = await apiFetch('/api/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -278,7 +279,7 @@ export default function Dashboard() {
 
     const fetchProfile = async () => {
       try {
-        const response = await fetch('/api/auth/me', {
+        const response = await apiFetch('/api/auth/me', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -336,7 +337,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await fetch('/api/users/profile', {
+      const response = await apiFetch('/api/users/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
