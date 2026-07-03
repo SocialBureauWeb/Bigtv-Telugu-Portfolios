@@ -544,7 +544,7 @@ export default function BIGTVHub() {
             year: '2007 — 2014'
           }
         ],
-        link: '#/maryada-ramadevi'
+        link: '#/ramadevi'
       },
     // ...customCorres.map((corres, idx) => ({
     //   id: `custom-${idx}`,
@@ -689,10 +689,7 @@ export default function BIGTVHub() {
       >
         <nav className="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-12 w-full">
           <div className="flex items-center gap-3">
-            <span className="w-6 h-6 bg-[#e30613] rounded flex items-center justify-center text-white font-display font-black text-xs">B</span>
-            <div className="font-mono text-xs tracking-[0.2em] text-[#e30613] uppercase font-bold">
-              BIG TV NEWSROOMS
-            </div>
+            <img src="../assets/telugu logo.png" alt="BIG TV Logo" className="w-auto h-10" />
           </div>
         
         </nav>
@@ -884,8 +881,7 @@ export default function BIGTVHub() {
           
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 bg-[#e30613] rounded flex items-center justify-center text-white font-display font-black text-[10px]">B</span>
-              <div className="font-display text-lg font-black tracking-widest text-[#e30613]">BIG TV NETWORK</div>
+              <img src="../assets/telugu logo.png" alt="BIG TV Logo" className="w-auto h-10" />
             </div>
             <p className="font-mono text-[9px] text-slate-500 tracking-wider">EDITORIAL PORTALS // NEWSROOM DIVISION CENTRAL</p>
           </div>
@@ -895,12 +891,6 @@ export default function BIGTVHub() {
             <span className="hover:text-white transition-colors cursor-pointer">Vetting Codes</span>
             <span className="hover:text-white transition-colors cursor-pointer">Central Archive</span>
           </div>
-
-          <div className="flex flex-col text-[12px] text-slate-400 gap-1">
-            <a href="https://bigtv-telugu-portfolios.onrender.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Backend (Render)</a>
-            <a href="https://bigtv-telugu-portfolios.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Frontend (Vercel)</a>
-          </div>
-
           <div className="text-center md:text-right">
             <p className="font-mono text-[10px] text-slate-500 leading-relaxed">
               © {new Date().getFullYear()} BIG TV NEWSROOMS.<br/>

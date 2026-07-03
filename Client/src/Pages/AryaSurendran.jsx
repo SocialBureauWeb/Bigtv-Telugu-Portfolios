@@ -315,10 +315,7 @@ export default function AryaSurendran() {
       <header className="w-full z-50 bg-[#050505]/85 backdrop-blur-md border-b border-white/5 py-6 sticky top-0">
         <nav className="flex justify-between items-center max-w-7xl mx-auto px-8 w-full">
           <div className="flex items-center gap-2">
-            <a href="#/" className="flex items-center gap-2 font-display text-sm font-black uppercase tracking-wider hover:text-[#ffd32a] transition-colors">
-              <span className="w-6 h-6 bg-[#ffd32a] rounded-full flex items-center justify-center text-[#050505] text-[11px] font-bold">B</span>
-              <span>BIG TV NEWSNET</span>
-            </a>
+            <img src="../assets/telugu logo.png" alt="BIG TV Logo" className="w-auto h-10" />
           </div>
           <div className="flex items-center gap-6">
             <a 
