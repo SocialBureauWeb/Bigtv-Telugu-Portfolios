@@ -8,6 +8,7 @@ import AparnaKurup from './Pages/AparnaKurup.jsx'
 import AryaSurendran from './Pages/AryaSurendran.jsx'
 import BinilPothan from './Pages/BinilPothan.jsx'
 import Ramadevi from './Pages/Ramadevi.jsx'
+import Sheik from './Pages/Sheik.jsx'
 
 function App() {
   const [hash, setHash] = useState(window.location.hash || '#/')
@@ -44,6 +45,10 @@ function App() {
 
   if (hash.startsWith('#/binil-pothen')) {
     return <BinilPothan />
+  }
+
+  if (hash.startsWith('#/sheik')) {
+    return <Sheik />
   }
 
   if (hash.startsWith('#/profile/')) {
