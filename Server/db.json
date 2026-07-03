@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "admin-id-default",
+      "name": "Jane Doe (Bureau Chief)",
+      "email": "admin@bigtv.com",
+      "password": "$2a$10$54cFHRjrYV3vTooxKB93Z.vueEDeVIrFZa8.ebAQ0wo/FyJfjm6Fa",
+      "division": "Political Bureau",
+      "bio": "Senior political bureau chief covering national assembly briefings, regional policy updates, and executive governance summits.",
+      "status": "LIVE RECORD",
+      "createdAt": "2026-06-29T11:58:39.463Z",
+      "updatedAt": "2026-06-29T12:03:14.873Z"
+    }
+    ,
+    {
+      "id": "ramadevi-001",
+      "name": "Maryada Ramadevi",
+      "email": "ramadevi@bigtv.com",
+      "password": "",
+      "division": "Senior Anchor",
+      "bio": "Experienced broadcast journalist and anchor with tenures at NTV, Express TV, and BIG TV.",
+      "status": "LIVE RECORD",
+      "contact": {
+        "mobile": "+91 8143241639",
+        "email": "maryadaramalingareddy@gmail.com",
+        "address": "Plot No. 20, Road No. 7, East Hasthinapuram, Vanasthalipuram, Hyderabad – 500070"
+      },
+      "social": {
+        "instagram": "https://www.instagram.com/ramadevimaryada?utm_source=qr&igsh=MWl5bTZldnVzYmxzcA=="
+      },
+      "portfolio": {
+        "heroTitle": "Maryada Ramadevi — Broadcast Anchor & Correspondent",
+        "heroSubtitle": "Senior Anchor at BIG TV. Experienced in live coverage, studio moderation, and editorial production.",
+        "pillars": [
+          { "title": "Live Anchoring", "desc": "Over a decade of live newsroom and election coverage experience." },
+          { "title": "Political Reporting", "desc": "Extensive experience in ground reporting and panel coordination." },
+          { "title": "Editorial Production", "desc": "Scriptwriting and producing current affairs specials." }
+        ],
+        "timeline": [
+          { "period": "2022 - PRESENT", "title": "Senior Anchor & Correspondent, BIG TV", "desc": "Lead anchor and correspondent for regional and national coverage." },
+          { "period": "2014 - 2016", "title": "Reporter, Express TV", "desc": "Field reporting and studio anchoring." },
+          { "period": "2007 - 2014", "title": "Reporter, NTV", "desc": "Early career reporting and production." }
+        ],
+        "awards": [],
+        "blogs": [],
+        "events": [],
+        "youtubeLink": "",
+        "image": "../Client/src/assets/Remadevi.jpg"
+      },
+      "createdAt": "2026-07-02T09:00:00.000Z",
+      "updatedAt": "2026-07-02T09:00:00.000Z"
+    }
+  ]
+}
