@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://webjrsocialbureau_db_user:B4itoH5hkl1SNT5M@cluster0.alkes18.mongodb.net/?appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI;
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)
